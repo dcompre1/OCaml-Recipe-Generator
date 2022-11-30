@@ -1,0 +1,203 @@
+Examples of commands and tags with the same recipe as output example
+
+** recieve a random recipe **
+$ dune exec -- src/main.exe rand my_recipe.txt
+output: 
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+** get the information for a recipe based on its ID **
+$ dune exec -- src/main.exe id 52771 my_recipe.txt
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+** get the information for a recipe based on its name **
+$ dune exec -- src/main.exe name my_recipe.txt spicy arrabiata penne
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+** receive random recipe that contains ingredient given by user **
+$ dune exec -- src/main.exe ingredient my_recipe.txt garlic
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+
+
+** recieve a random recipe of a certain cuisine type (optional: enter ingredients to avoid) **
+$ dune exec -- src/main.exe cuisine my_recipe.txt Italian peanut soy 
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+** recieve a random vegetarian recipe (optional: enter ingredients to avoid) **
+$ dune exec -- src/main.exe vegetarian my_recipe.txt peanut soy 
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Spicy Arrabiata Penne
+    Meal ID: 52771
+    Italian
+    Ingredient List:
+        - 1 pound penne rigate 
+        - 1/4 cup olive oil 
+        - 3 cloves garlic 
+        - 1 tin chopped tomatoes 
+        - 1/2 teaspoon red chile flakes
+        - 1/2 teaspoon italian seasoning 
+        - 6 leaves basil
+        - spinkling Parmigiano-Reggiano 
+    Instructions:
+    Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=1IszT_guI08
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg
+
+** recieve a random vegan recipe (optional: enter ingredients to avoid) **
+$ dune exec -- src/main.exe vegan my_recipe.txt peanut soy 
+[to Stdout]
+Thank you for using the Recipe Generator! All of your recipe information is in my_recipe.txt.
+
+[ In my_recipe.txt ]
+    Meal Name: Roast fennel and aubergine paella
+    Meal ID: 52942
+    Spanish
+    Ingredient List:
+        - 6 small Baby Aubergine
+        - 4 small Fennel
+        - 1 thinly sliced Red Pepper
+        - 1 medium Courgettes
+        - 1 finely chopped Onion
+        - 300g Paella Rice
+        - 1 tsp Paprika
+        - pinch Saffron
+        - 200ml White Wine
+        - 700ml Vegetable Stock
+        - 100g Frozen Peas
+        - 1 chopped Lemon
+        - Handful Parsley
+        - pinch Salt
+        - pinch Black Pepper
+    Instructions:
+    1 Put the fennel, aubergine, pepper and courgette in a roasting tray. Add a glug of olive oil, season with salt and pepper and toss around to coat the veggies in the oil. Roast in the oven for 20 minutes, turning a couple of times until the veg are pretty much cooked through and turning golden.\r\n\r\n2 Meanwhile, heat a paella pan or large frying pan over a low\u2013 medium heat and add a glug of olive oil. Saut\u00e9 the onion for 8\u201310 minutes until softened. Increase the heat to medium and stir in the rice, paprika and saffron. Cook for around 1 minute to start toasting the rice, then add the white wine. Reduce by about half before stirring in two-thirds of the stock. Reduce to a simmer and cook for 10 minutes without a lid, stirring a couple of times.\r\n\r\n3 Stir in the peas, add some seasoning, then gently mix in the roasted veg. Pour over the remaining stock, arrange the lemon wedges on top and cover with a lid or some aluminium foil. Cook for a further 10 minutes.\r\n\r\n4 To ensure you get the classic layer of toasted rice at the bottom of the pan, increase the heat to high until you hear a slight crackle. Remove from the heat and sit for 5 minutes before sprinkling over the parsley and serving.
+    Youtube Link: https:\/\/www.youtube.com\/watch?v=H5SmjR-fxUs
+    Image: https:\/\/www.themealdb.com\/images\/media\/meals\/1520081754.jpg
+
+
+$ dune exec -- src/main.exe --cuisines 
+[Stdout]
+Cuisines to choose from:
+- American
+- British
+- Canadian
+- Chinese
+- Croatian
+- Dutch
+- Egyptian
+- French
+- Greek
+- Indian
+- Irish
+- Italian
+- Jamaican
+- Japanese
+- Kenyan
+- Malaysian
+- Mexican
+- Moroccan
+- Polish
+- Portuguese
+- Russian
+- Spanish
+- Thai
+- Tunisian
+- Turkish
+- Vietnamese
