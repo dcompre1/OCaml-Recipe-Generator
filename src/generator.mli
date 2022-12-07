@@ -1,21 +1,18 @@
 
-type meal = { name : string; id : int; instructions : string; area: string; ingredients : string list; img : string; vid : string } [@@deriving yojson]
+module M = Meal
+type meal = M.meal
 
-(*with a meal as input , return the list of its ingredients
-   example: "chicken", "cheese", "onion"*)
-val get_ingredients: meal -> string list
+val rand_meal: string -> unit
 
-(*with a meal as input, return the string that indicates the area the meal originates from
-   examples: "Indian", "Chinese", "Mexican"*)
-val get_area: meal -> string
+val get_ingredients: (string * string) list -> string list
 
-(* return a string option of video url
-   return None if there is no video associated with the meal, return Some URL_STRING if a video exists*)   
-val get_video: meal -> string option
+val get_measurements: (string * string) list -> string list 
 
-(* return a string option of image url
-   return None if there is no image associated with the meal, return Some URL_STRING if an image exists*)   
-val get_img: meal -> string option
+val lookup: string -> (string * string) list -> string option
+
+val get_meal_info: (string * string) list -> string list 
+
+val find_ingredients: string -> string list -> bool
 
 (* make API request based on char and string values and return meal list: Some [meal1, meal2 ... ]
    if char == v: use url for finding a vegan meal www.themealdb.com/api/json/v1/1/filter.php?c=Vegan
@@ -38,7 +35,7 @@ val find_meals: char -> string -> meal list option
       "Chicken" would return ["Chicken"; "Chicken Breast"; "Chicken Stock"; ...]  
 
    possibly include an algorithm that can take care of misspelled words *)
-val find_ingredients: string -> string list
+(*val find_ingredients: string -> string list -> string list *)
 
 (*
 (* for all of the strings in the list, make a call to format_ingredient and replace/fix each string 
@@ -100,9 +97,6 @@ val format_meal_name: string -> string
 (* make call to format_meal_name
    use url for finding a meal by its name:  www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata *)
 val get_meal_by_name: string -> meal
-
-(*this function will only be used if a frontend is not created for this project, print meal info to file*)
-val print_meal: meal -> string -> unit 
 
 (*this function will only be used if a frontend is not created for this project, print all area options to stdout*)
 val print_cuisines: unit -> unit

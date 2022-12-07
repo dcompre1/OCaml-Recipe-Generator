@@ -5,6 +5,8 @@
     src/generator.ml
     src/generator.mli
     src/main.ml
+    src/meal.ml
+    src/meal.mli
     src/mocks.txt
     src/dune
     tests/tests.ml
