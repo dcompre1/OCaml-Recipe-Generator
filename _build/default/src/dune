@@ -3,7 +3,7 @@
   (modules
     meal)
   (preprocess
-    (pps ppx_deriving_yojson))
+    (pps ppx_deriving_yojson bisect_ppx ))
   (libraries
     cohttp-lwt-unix
     core
@@ -21,7 +21,7 @@
   (modules
     generator)
   (preprocess
-    (pps ppx_deriving_yojson))
+    (pps ppx_deriving_yojson bisect_ppx ))
   (libraries
     cohttp-lwt-unix
     core

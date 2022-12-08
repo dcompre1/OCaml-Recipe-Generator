@@ -2,15 +2,14 @@
 module M = Meal
 type meal = M.meal
 
-val rand_meal: string -> unit
 
 val get_ingredients: (string * string) list -> string list
 
 val get_measurements: (string * string) list -> string list 
 
-val lookup: string -> (string * string) list -> string option
+val lookup: string -> (string * string) list -> string
 
-val get_meal_info: (string * string) list -> string list 
+val get_meal_info: (string * string) list -> (string * string * string * string * string * string) option
 
 val find_ingredients: string -> string list -> bool
 
@@ -37,11 +36,11 @@ val find_meals: char -> string -> meal list option
    possibly include an algorithm that can take care of misspelled words *)
 (*val find_ingredients: string -> string list -> string list *)
 
-(*
+
 (* for all of the strings in the list, make a call to format_ingredient and replace/fix each string 
    return the corrected list of strings
    separate string by whitespace and then call format_ingredient on each value in this list*)
-val format_restrictions: string list -> string list *)
+val format_restrictions: string list -> string list 
 
 (* ingredients need to be in a specific format to use with url
    - Spaces changed into underscores
@@ -81,7 +80,7 @@ val get_ingredient_recipe: string -> string list -> meal * meal list
 (* string is the ID value
    call valid_id
    use url to find a meal by its ID:  www.themealdb.com/api/json/v1/1/lookup.php?i=52772 and return the meal*)
-val get_meal_by_id: string -> meal
+val get_meal_by_id: int -> string -> unit
 
 (* figure out if the ID provided only contains digits return false or true 
    if false, another function will have to handle this input issue/display an error to user *)
@@ -96,9 +95,8 @@ val format_meal_name: string -> string
 
 (* make call to format_meal_name
    use url for finding a meal by its name:  www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata *)
-val get_meal_by_name: string -> meal
+val get_meal_by_name: string -> string -> unit
 
-(*this function will only be used if a frontend is not created for this project, print all area options to stdout*)
 val print_cuisines: unit -> unit
 
 (*potential frontend goals:

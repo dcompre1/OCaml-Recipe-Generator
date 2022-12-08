@@ -44,25 +44,25 @@ Possible Libraries:
 - ReScript
 
 ### Order of Implementation
-- make command paths work just to begin structure of program
+- DONE: make command paths work just to begin structure of program 
     - implement all the commands and flags indicated in main.ml
     - for this step I will likely just make them all print something to the terminal to verify they're working
 
-- --cuisines flag: prints out full list of cuisines from TheMealDB
+- DONE: --cuisines flag: prints out full list of cuisines from TheMealDB DONE
     - get data from TheMealDB into a list and print it out to stdout
     - in generator.ml implement print_cuisines
 
-- rand command: get 1 recipe randomly selected from all of the TheMealDB recipes
+- DONE: rand command: get 1 recipe randomly selected from all of the TheMealDB recipes 
     - make API request to TheMealDB url for random recipe 
     - extract all meal information from this and print it to a file 
     - in generator.ml implement get_random_meal, print_meal
 
-- id command: lookup 1 recipe from TheMealDB from an id provided by the user 
+- DONE: id command: lookup 1 recipe from TheMealDB from an id provided by the user 
     - make API request to TheMealDB url for id lookup
     - print this meal information to a file 
     - in generator.ml implement get_meal_by_id
 
-- name command: lookup 1 recipe from TheMealDB from a meal name provided by the user 
+- DONE: name command: lookup 1 recipe from TheMealDB from a meal name provided by the user 
     - make API request to TheMealDB url for name lookup 
     - print this meal information to a file
     - in generator.ml implement get_meal_by_name

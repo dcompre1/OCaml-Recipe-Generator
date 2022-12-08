@@ -3,21 +3,30 @@ open Core
 
 (*name * id * instructions * area * img * vid * ingredients * measurements*)
 type meal =  string * string * string * string * string * string * string list * string list
-(*{name : string; id : string; instructions : string; area: string; img : string; vid : string ; ingredients : string list; measurements: string list} [@@deriving yojson] *)
 
-[@@@ocaml.warning "-27"]
+let get_name(m: meal): string = let (name,_,_,_,_,_,_,_) = m in name
 
+let get_id(m: meal): string = let (_,id,_,_,_,_,_,_) = m in id
+let get_instructions(m: meal): string = let (_,_,instructions,_,_,_,_,_) = m in instructions
+let get_area(m: meal): string = let (_,_,_,area,_,_,_,_) = m in area
+(*let get_img(m: meal): string = let (_,_,_,_,img,_,_,_) = m in img *)
+let get_vid(m: meal): string = let (_,_,_,_,_,vid,_,_) = m in vid
+let get_ingredients(m: meal): string list = let (_,_,_,_,_,_,ingredients,_) = m in ingredients 
+let get_measurements(m: meal): string list =  let (_,_,_,_,_,_,_,measurements) = m in measurements
 
 let rec merge_with (l: string list) (l2: string list) (n: int): string list = 
   match l, l2 with 
   | [], [] -> []
-  | [], y -> failwith "shouldn't get here"
+  | [], _ -> failwith "shouldn't get here"
   | x, [] -> x
-  | x :: xs, y :: ys -> ( string_of_int n ^ ". " ^ y ^ " of " ^ x) :: merge_with xs ys (n + 1)
+  | x :: xs, y :: ys -> match x,y with 
+                        | "", "" -> []
+                        | x, "" -> ( string_of_int n ^ ". " ^ x) :: merge_with xs ys (n + 1)
+                        | "", _ -> []
+                        | x, y -> ( string_of_int n ^ ". " ^ y ^ " " ^ x) :: merge_with xs ys (n + 1)
 
-(*with a meal as input , return the list of its ingredients
-   example: "chicken", "cheese", "onion"*)
-let get_ingredients(m: meal)(n: int): string list = 
+(*with a meal as input , return the list of its ingredients example: "chicken", "cheese", "onion"*)
+let get_ordered_ingredients(m: meal): string list = 
    let (_,_,_,_,_,_,ingredients,measurements) = m in
   match ingredients with 
   | [] -> []
@@ -27,13 +36,12 @@ let get_ingredients(m: meal)(n: int): string list =
 let add_order (l: string list): string list = 
   List.mapi ~f:(fun i s -> (string_of_int (i + 1)) ^ ". " ^ s) l  
 
-(*with a meal as input, return the string that indicates the area the meal originates from
-   examples: "Indian", "Chinese", "Mexican"*)
-let get_instructions (m: meal): string list = 
+(*helper function to get instructions so they are ordered: ["1..."; "2..."; ...]*)
+let get_ordered_instructions (m: meal): string list = 
    let (_,_,instructions,_,_,_,_,_) = m in
    match instructions with 
    | "" -> []
-   | x -> add_order (String.split_on_chars ~on:['.'] x |> List.filter ~f:(fun s -> String.(=) s ""))
+   | x -> add_order (String.split_on_chars ~on:['.'] x |> List.filter ~f:(fun s -> String.(<>) s ""))
 
 (* return a string option of video url from meal type 
    return None if there is no video associated with the meal, return Some URL_STRING if a video exists*)   
@@ -52,23 +60,53 @@ let get_img (m: meal): string option =
    | s -> Some s
 
 let print_list (l : string list) : unit =
-   List.iter ~f:(fun x -> Stdio.printf "%s\n\n " x) l
+   List.iter ~f:(fun x -> Stdio.printf "%s\n " x) l
 
-(*this function will only be used if a frontend is not created for this project, print meal info to file*)
-let print_meal (m: meal) (filename: string): unit =  
+[@@@coverage off]
+let print_meal (m: meal): unit =  
    let (name,id,_,area,_,_,_,_) = m in
-   print_endline name;
-   print_endline id;
-   print_endline area;
-   print_list (get_ingredients m 1);
-   print_list (get_instructions m);
+   Stdio.printf "Meal Name: %s\n" name;
+   Stdio.printf "Meal ID: %s\n" id;
+   Stdio.printf "Area: %s\n" area;
+   print_endline "Ingredients: ";
+   print_list (get_ordered_ingredients m);
+   print_endline "";
+   print_endline "Instructions";
+   print_list (get_ordered_instructions m);
    let vid = 
       match (get_video m) with 
       |None -> "Youtube video not available"
       |Some v -> v
-   in print_endline vid;
+   in Stdio.printf "Youtube video: %s\n" vid;
    let img = 
       match (get_img m) with 
       |None -> "Image not available"
       |Some i -> i
-   in print_endline img;
+   in Stdio.printf "Image: %s\n" img
+
+let meal_to_file (m: meal)(filename: string): unit = 
+   let (name,id,_,area,_,_,_,_) = m in
+   Arg.write_arg filename (
+   Array.concat [
+      [| 
+      "Meal Name: " ^ name; 
+      "Meal ID: " ^ id;
+      "Area: \n" ^ area;
+      "Ingredients: "; 
+      |]; 
+      (List.to_array (get_ordered_ingredients m));
+      [|"\nInstructions: "|];
+      (List.to_array (get_ordered_instructions m));
+      [|(let vid = 
+         match (get_video m) with 
+         |None -> "Youtube video not available"
+         |Some v -> v
+      in "Youtube video: " ^ vid);
+      (let img = 
+         match (get_img m) with 
+         |None -> "Image not available"
+         |Some i -> i
+      in "Image: " ^ img)|]
+      ]
+      );
+   
