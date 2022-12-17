@@ -2,7 +2,7 @@
 module M = Meal
 type meal = M.meal
 
-val get_ingredient_list: string -> string -> string list -> unit
+val get_recipe: char -> string -> string -> string list -> unit
 (*val get_ingredients: (string * string) list -> string list
 
 val get_measurements: (string * string) list -> string list 
@@ -22,7 +22,7 @@ val find_ingredients: string -> string list -> bool
     if char == a: use string with areas url www.themealdb.com/api/json/v1/1/filter.php?a=[area Capitalized]
 
     return None if no meals returned from API request *)
-val find_meals: char -> string -> meal list
+val find_meals: string -> meal list
 
 (* sanitize input string and return a list of possible ingredients to avoid that include this string
 
@@ -63,19 +63,6 @@ val get_random_meal: string ->  unit
 
 (* return a randomly selected meal from a list of meals *)
 val get_meal: meal list -> meal
-
-(* Call find_meals to get all vegan meals, call filter_meals with string list provided
-   From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-val get_vegan_recipe: string list -> meal * meal list
-
-(* Call find_meals to get all vegetarian meals, call filter_meals with string list provided
-   From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-val get_vegetarian_recipe: string list -> meal * meal list
-
-(* Call format_ingredient
-   Call find_meals to get all meals with this ingredient, call filter_meals with string list provided
-   From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-val get_ingredient_recipe: string -> string list -> meal * meal list
 
 (* string is the ID value
    call valid_id

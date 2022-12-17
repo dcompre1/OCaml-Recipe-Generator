@@ -73,7 +73,7 @@ let ingredient =
       match filename with  
       | Some x -> x
       | None -> prompt_for_filename "filename"
-  in fun () -> G.get_ingredient_list filename ingredient restrictions)
+  in fun () -> G.get_recipe 'i' filename ingredient restrictions)
 
 let cuisine = 
   Command.basic 
@@ -91,7 +91,7 @@ let cuisine =
   | Some x, None -> x, prompt_for_value "Cuisine Type" String.of_string
   | None, Some y -> prompt_for_filename "filename", y
   | None, None -> prompt_for_filename "filename",  prompt_for_value "Cuisine Type" String.of_string
-  in fun () -> print_endline cuisine; print_list restrictions; print_endline filename)
+  in fun () -> G.get_recipe 'c' filename cuisine restrictions)
 
 let vegan = 
   Command.basic 
@@ -105,7 +105,7 @@ let vegan =
     | Some x -> x
     | None -> "my_recipe.txt" 
    in
-   fun () -> print_endline filename; print_list restrictions)
+   fun () -> G.get_recipe 'v' filename "" restrictions)
 
 let vegetarian = 
   Command.basic 
@@ -119,7 +119,7 @@ let vegetarian =
    | Some x -> x
    | None -> "my_recipe.txt" 
   in
-  fun () -> print_endline filename; print_list restrictions)
+  fun () -> G.get_recipe 'g' filename "" restrictions)
 
 (*
 let prompt_for_command: string = 

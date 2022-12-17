@@ -8,8 +8,9 @@ type meal = M.meal
 
 [@@@ocaml.warning "-27"]
 
+(*
 let unimplemented () =
-	failwith "unimplemented"
+	failwith "unimplemented" *)
 
 let print_list (l : string list) : unit =
    List.iter ~f:(fun x -> Stdio.printf "%s\n\n" x) l
@@ -177,9 +178,8 @@ let print_tuples(l: (string * string) list): unit =
 let print_list2 (l: (string * string) list list): unit = 
    List.iter ~f:(fun x -> print_tuples x) l *)
    
-let find_meals (c: char) (s: string): meal list =
-
-   let body = Lwt_main.run (big_body ("https://www.themealdb.com/api/json/v1/1/filter.php?i=" ^ s)) in
+let find_meals (uri: string): meal list =
+   let body = Lwt_main.run (big_body uri) in
    format_body2 body |> List.map ~f:(fun x -> tuple_list (format_body x))|> List.map ~f:(fun x -> M.lookup "idMeal" x) |> List.map ~f:(fun x -> get_meal_by_id2 "" x) 
    (*make call to API, get a series of lists into one big list, call create_meal on each meal in that list*)
 
@@ -189,29 +189,18 @@ let get_meal (m: meal list): meal =
    | [] -> M.empty_meal
    | m -> let n = Random.int ((List.length m) - 1) in List.nth_exn m n
 
-   let get_ingredient_list (filename: string)(ingredient: string)(restrictions: string list): unit = 
-      let meal = 
-      find_meals 'c' (format_ingredient ingredient)|> filter_meals restrictions |> get_meal in  M.print_meal meal; M.meal_to_file meal filename
+let get_recipe (c: char) (filename: string)(input: string)(restrictions: string list): unit = 
+   let meals = 
+   match c with
+   | 'i' ->  find_meals ("https://www.themealdb.com/api/json/v1/1/filter.php?i=" ^ (format_ingredient input))
+   | 'v' -> find_meals "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan"
+   | 'g' -> find_meals "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian"
+   | 'c' -> find_meals ("https://www.themealdb.com/api/json/v1/1/filter.php?a=" ^ (format_ingredient input))
+   | _ -> failwith "don't get here"
+   in 
+   let meal = 
+   filter_meals restrictions meals |> get_meal in  M.print_meal meal; M.meal_to_file meal filename
    
-
-
-(* Call find_meals to get all vegan meals, call filter_meals with string list provided
-   From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-let get_vegan_recipe (restrictions: string list): meal * meal list = 
-   unimplemented ()
-
-   
-(* Call find_meals to get all vegetarian meals, call filter_meals with string list provided
-   From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-let get_vegetarian_recipe (restrictions: string list): meal * meal list = 
-   unimplemented ()
-   
-
-   (* Call format_ingredient
-      Call find_meals to get all meals with this ingredient, call filter_meals with string list provided
-      From this list call get_meal to get one random meal and return this with the rest of the list without this meal in it *)
-let get_ingredient_recipe (ingredient: string) (restrictions: string list): meal * meal list = 
-   unimplemented ()
 
 let print_cuisines (): unit = 
    print_endline "Here is a list of all possible cuisine types available to choose from: ";
