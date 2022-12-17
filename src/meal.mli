@@ -1,13 +1,26 @@
 (*name * id * instructions * area * img * vid * ingredients * measurements*)
-type meal =  string * string * string * string * string * string * string list * string list
+type meal =  {name: string; id: string; instructions: string; area: string;  img:string;  vid: string; ingredients:string list;  measurements:string list}
 
+val empty_meal: meal
+(*string * string * string * string * string * string * string list * string list *)
+(*
 val get_name: meal -> string
 val get_id: meal -> string 
 val get_instructions: meal -> string
 val get_area: meal -> string
 val get_vid: meal -> string
 val get_ingredients: meal -> string list 
-val get_measurements: meal -> string list
+val get_measurements: meal -> string list *)
+
+val get_ingredients: (string * string) list -> string list
+
+val get_measurements: (string * string) list -> string list 
+
+val lookup: string -> (string * string) list -> string
+
+val get_meal_info: (string * string) list -> (string * string * string * string * string * string) option
+
+val create_meal: (string * string) list -> meal option
 
 val get_ordered_ingredients: meal -> string list
 

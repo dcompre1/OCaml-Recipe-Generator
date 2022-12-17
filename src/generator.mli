@@ -2,15 +2,15 @@
 module M = Meal
 type meal = M.meal
 
-
-val get_ingredients: (string * string) list -> string list
+val get_ingredient_list: string -> string -> string list -> unit
+(*val get_ingredients: (string * string) list -> string list
 
 val get_measurements: (string * string) list -> string list 
 
 val lookup: string -> (string * string) list -> string
 
 val get_meal_info: (string * string) list -> (string * string * string * string * string * string) option
-
+*)
 val find_ingredients: string -> string list -> bool
 
 (* make API request based on char and string values and return meal list: Some [meal1, meal2 ... ]
@@ -22,7 +22,7 @@ val find_ingredients: string -> string list -> bool
     if char == a: use string with areas url www.themealdb.com/api/json/v1/1/filter.php?a=[area Capitalized]
 
     return None if no meals returned from API request *)
-val find_meals: char -> string -> meal list option
+val find_meals: char -> string -> meal list
 
 (* sanitize input string and return a list of possible ingredients to avoid that include this string
 
@@ -80,7 +80,7 @@ val get_ingredient_recipe: string -> string list -> meal * meal list
 (* string is the ID value
    call valid_id
    use url to find a meal by its ID:  www.themealdb.com/api/json/v1/1/lookup.php?i=52772 and return the meal*)
-val get_meal_by_id: int -> string -> unit
+val get_meal_by_id: string -> int -> unit
 
 (* figure out if the ID provided only contains digits return false or true 
    if false, another function will have to handle this input issue/display an error to user *)

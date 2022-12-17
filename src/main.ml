@@ -32,7 +32,7 @@ let id =
   | Some x -> x
   | None ->  prompt_for_value "ID" Int.of_string 
   in
-    fun () -> G.get_meal_by_id id filename)
+    fun () -> G.get_meal_by_id filename id)
 
 let print_list (l : string list) : unit =
   List.iter ~f:(fun x -> Stdio.printf "%s " x) l
@@ -73,7 +73,7 @@ let ingredient =
       match filename with  
       | Some x -> x
       | None -> prompt_for_filename "filename"
-  in fun () -> print_endline ingredient; print_endline filename; print_list restrictions) 
+  in fun () -> G.get_ingredient_list filename ingredient restrictions)
 
 let cuisine = 
   Command.basic 
