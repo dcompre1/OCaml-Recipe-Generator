@@ -11,6 +11,9 @@ val get_area: meal -> string
 val get_vid: meal -> string
 val get_ingredients: meal -> string list 
 val get_measurements: meal -> string list *)
+val equal: meal -> meal -> bool 
+
+val is_empty: meal ->  bool
 
 val get_ingredients: (string * string) list -> string list
 

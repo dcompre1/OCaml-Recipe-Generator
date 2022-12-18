@@ -1,29 +1,31 @@
-Meal Name: Stovetop Eggplant With Harissa, Chickpeas, and Cumin Yogurt
-Meal ID: 52817
+Meal Name: Vegan Lasagna
+Meal ID: 52775
 Area: 
-American
+Italian
 Ingredients: 
-1. 4 tablespoons Olive Oil
-2. 6 small Egg Plants
-3. \u00bd tablespoon Harissa
-4. 1 can Chickpeas
-5. 2 cups halved Cherry Tomatoes
-6. 1 1\/2 cups Greek yogurt
-7. 1 tablespoon Ground cumin
-8. \u00bd cup  Parsley
+1. 1 cups green red lentils
+2. 1 carrot
+3. 1 onion
+4. 1 small zucchini
+5. sprinking coriander
+6. 150g spinach
+7. 10 lasagne sheets
+8. 35g vegan butter
+9. 4 tablespoons flour
+10. 300ml soya milk
+11. 1.5 teaspoons mustard
+12. 1 teaspoon vinegar
 
 Instructions: 
-1. Heat the oil in a 12-inch skillet over high heat until shimmering
-2.  Add the eggplants and lower the heat to medium
-3.  Season with salt and pepper as you rotate the eggplants, browning them on all sides
-4.  Continue to cook, turning regularly, until a fork inserted into the eggplant meets no resistance (you may have to stand them up on their fat end to finish cooking the thickest parts), about 20 minutes, lowering the heat and sprinkling water into the pan as necessary if the eggplants threaten to burn or smoke excessively
-5. \r\n\r\n2
-6. \r\nMix the harissa, chickpeas and tomatoes together, then add to the eggplants
-7.  Cook until the tomatoes have blistered and broken down, about 5 minutes more
-8.  Season with salt and pepper and add water as necessary to thin to a saucy consistency
-9.  Meanwhile, combine the yogurt and cumin in a serving bowl
-10.  Season with salt and pepper
-11. \r\n\r\n3
-12. \r\nTop the eggplant mixture with the parsley, drizzle with more extra virgin olive oil, and serve with the yogurt on the side
-Youtube video: https:\/\/www.youtube.com\/watch?v=uYB-1xJp4lg
-Image: https:\/\/www.themealdb.com\/images\/media\/meals\/yqwtvu1487426027.jpg
+1. 1) Preheat oven to 180 degrees celcius
+2.  \r\n2) Boil vegetables for 5-7 minutes, until soft
+3.  Add lentils and bring to a gentle simmer, adding a stock cube if desired
+4.  Continue cooking and stirring until the lentils are soft, which should take about 20 minutes
+5.  \r\n3) Blanch spinach leaves for a few minutes in a pan, before removing and setting aside
+6.  \r\n4) Top up the pan with water and cook the lasagne sheets
+7.  When cooked, drain and set aside
+8. \r\n5) To make the sauce, melt the butter and add the flour, then gradually add the soya milk along with the mustard and the vinegar
+9.  Cook and stir until smooth and then assemble the lasagne as desired in a baking dish
+10.  \r\n6) Bake in the preheated oven for about 25 minutes
+Youtube video: https:\/\/www.youtube.com\/watch?v=VU8cXvlGbvc
+Image: https:\/\/www.themealdb.com\/images\/media\/meals\/rvxxuy1468312893.jpg

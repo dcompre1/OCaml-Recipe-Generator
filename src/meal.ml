@@ -1,21 +1,14 @@
 (*implementation of functions in meal.mli*)
 open Core
 
-(*name * id * instructions * area * img * vid * ingredients * measurements*)
 type meal =  {name: string; id: string; instructions: string; area: string;  img:string;  vid: string; ingredients:string list;  measurements:string list}
-
 let empty_meal = {name = ""; id = ""; instructions = ""; area = ""; img = ""; vid = ""; ingredients = []; measurements = []}
-(*string * string * string * string * string * string * string list * string list*)
 
-(*
-let get_name(m: meal): string = (*let {name;_;_;_;_;_;_;_} = m in name*)
 
-let get_id(m: meal): string = let {_;id;_;_;_;_;_;_} = m in id
-let get_instructions(m: meal): string = let (_,_,instructions,_,_,_,_,_) = m in instructions
-let get_area(m: meal): string = let (_,_,_,area,_,_,_,_) = m in area
-let get_vid(m: meal): string = let (_,_,_,_,_,vid,_,_) = m in vid
-let get_ingredients(m: meal): string list = let (_,_,_,_,_,_,ingredients,_) = m in ingredients 
-let get_measurements(m: meal): string list =  let (_,_,_,_,_,_,_,measurements) = m in measurements *)
+let equal (m1: meal)(m2: meal): bool = 
+   String.(=) m1.name m2.name && String.(=) m1.name m2.name && String.(=) m1.name m2.name  && String.(=) m1.name m2.name && String.(=) m1.name m2.name  && String.(=) m1.name m2.name && List.equal String.(=) m1.ingredients m2.ingredients && List.equal String.(=) m1.measurements m2.measurements
+
+let is_empty (m: meal): bool = equal m empty_meal
 
 let rec merge_with (l: string list) (l2: string list) (n: int): string list = 
   match l, l2 with 
@@ -43,15 +36,11 @@ let get_ordered_instructions (m: meal): string list =
    | "" -> []
    | x -> add_order (String.split_on_chars ~on:['.'] x |> List.filter ~f:(fun s -> String.(<>) s ""))
 
-(* return a string option of video url from meal type 
-   return None if there is no video associated with the meal, return Some URL_STRING if a video exists*)   
 let get_video (m: meal): string option =
    match m.vid with 
    | "" -> None
    | s -> Some s
-
-(* return a string option of image url from meal type 
-   return None if there is no image associated with the meal, return Some URL_STRING if an image exists*)   
+  
 let get_img (m: meal): string option = 
    match m.img with 
    | "" -> None

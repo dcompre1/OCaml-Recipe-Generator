@@ -3,6 +3,7 @@ module M = Meal
 type meal = M.meal
 
 val get_recipe: char -> string -> string -> string list -> unit
+val get_recipe_list: char -> string -> string -> string list -> unit
 (*val get_ingredients: (string * string) list -> string list
 
 val get_measurements: (string * string) list -> string list 
