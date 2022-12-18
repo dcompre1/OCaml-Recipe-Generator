@@ -1,0 +1,157 @@
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Runner: processes
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Chooser: simple
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration suite_name = "Assignment3 Tests"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration cache_filename = "/home/dcompre1/project/_build/default/tests/oUnit-$(suite_name).cache"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration run_gc_full_major = "true"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration display = "true"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration results_style_1_X = "false"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration testdata_dir = "none"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration health_check_interval = "1."
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration verbose = "false"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration chooser = "simple"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration output_html_dir = "none"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration processes_kill_period = "5."
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration runner = "processes"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration shards = "8"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration processes_grace_period = "5."
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration log_encoding = "utf-8"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration output_junit_file = "none"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration ci = "false"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Configuration output_file = "/home/dcompre1/project/_build/default/tests/oUnit-$(suite_name)-$(shard_id).log"
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Using 8 workers maximum.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#01.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#01 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#02.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#02 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#03.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#03 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#04.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#04 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#05.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#05 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#06.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#06 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#07.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#07 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Starting worker number DESKTOP-4VSHQ10#08.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#08 started.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions, Assignment3 Tests:0:Project:3:Find Ingredients, Assignment3 Tests:0:Project:2:Format Meal Name, Assignment3 Tests:0:Project:1:Valid ID, Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: Start test Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: Start test Assignment3 Tests:0:Project:1:Valid ID.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: Start test Assignment3 Tests:0:Project:2:Format Meal Name.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: Start test Assignment3 Tests:0:Project:3:Find Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#05 I: Start test Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#06 I: Start test Assignment3 Tests:0:Project:5:Format Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#07 I: Start test Assignment3 Tests:0:Project:6:Lookup.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions, Assignment3 Tests:0:Project:3:Find Ingredients, Assignment3 Tests:0:Project:2:Format Meal Name, Assignment3 Tests:0:Project:1:Valid ID, Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: Test Assignment3 Tests:0:Project:0:Format Ingredient is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: Test Assignment3 Tests:0:Project:1:Valid ID is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: Test Assignment3 Tests:0:Project:2:Format Meal Name is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: Test Assignment3 Tests:0:Project:3:Find Ingredients is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions, Assignment3 Tests:0:Project:3:Find Ingredients, Assignment3 Tests:0:Project:2:Format Meal Name, Assignment3 Tests:0:Project:1:Valid ID, Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: End test Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: End test Assignment3 Tests:0:Project:1:Valid ID.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: End test Assignment3 Tests:0:Project:2:Format Meal Name.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: End test Assignment3 Tests:0:Project:3:Find Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions, Assignment3 Tests:0:Project:3:Find Ingredients, Assignment3 Tests:0:Project:2:Format Meal Name, Assignment3 Tests:0:Project:1:Valid ID, Assignment3 Tests:0:Project:0:Format Ingredient.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#06 I: Test Assignment3 Tests:0:Project:5:Format Restrictions is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#08 I: Start test Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 8 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#06 I: End test Assignment3 Tests:0:Project:5:Format Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: Start test Assignment3 Tests:0:Project:8:Get Measurements.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: Start test Assignment3 Tests:0:Project:9:Get Meal Info.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: Start test Assignment3 Tests:0:Project:10:Merge With.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: Start test Assignment3 Tests:0:Project:11:Ordered.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 8 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 8 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:5:Format Restrictions, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 7 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 7 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#07 I: Test Assignment3 Tests:0:Project:6:Lookup is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 7 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 7 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#05 I: Test Assignment3 Tests:0:Project:4:Has Restrictions is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#07 I: End test Assignment3 Tests:0:Project:6:Lookup.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 7 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 7 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:6:Lookup, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#05 I: End test Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 6 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 6 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients, Assignment3 Tests:0:Project:4:Has Restrictions.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 5 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 5 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: Test Assignment3 Tests:0:Project:9:Get Meal Info is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: Test Assignment3 Tests:0:Project:10:Merge With is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 5 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 5 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#03 I: End test Assignment3 Tests:0:Project:9:Get Meal Info.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#02 I: End test Assignment3 Tests:0:Project:10:Merge With.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: Test Assignment3 Tests:0:Project:11:Ordered is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 5 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 5 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:10:Merge With, Assignment3 Tests:0:Project:9:Get Meal Info, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#01 I: End test Assignment3 Tests:0:Project:11:Ordered.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 3 tests running : Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 3 tests running: Assignment3 Tests:0:Project:11:Ordered, Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 2 tests running : Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 2 tests running: Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: Test Assignment3 Tests:0:Project:8:Get Measurements is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 2 tests running : Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 2 tests running: Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#04 I: End test Assignment3 Tests:0:Project:8:Get Measurements.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 2 tests running : Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 2 tests running: Assignment3 Tests:0:Project:8:Get Measurements, Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 1 tests running : Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 1 tests running: Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#08 I: Test Assignment3 Tests:0:Project:7:Get Ingredients is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 1 tests running : Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 1 tests running: Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#08 I: End test Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Still 1 tests running : Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 1 tests running: Assignment3 Tests:0:Project:7:Get Ingredients.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: 0 tests running: .
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#06 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#07 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#05 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#03 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#02 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#01 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#04 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Worker DESKTOP-4VSHQ10#08 has ended.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Used 8 worker during test execution.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 1 tests with shard DESKTOP-4VSHQ10#06.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 1 tests with shard DESKTOP-4VSHQ10#07.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 2 tests with shard DESKTOP-4VSHQ10#04.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 1 tests with shard DESKTOP-4VSHQ10#08.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 2 tests with shard DESKTOP-4VSHQ10#01.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 1 tests with shard DESKTOP-4VSHQ10#05.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 2 tests with shard DESKTOP-4VSHQ10#02.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Run 2 tests with shard DESKTOP-4VSHQ10#03.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#06, 15 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#07, 12 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#04, 4 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#08, 1 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#05, 11 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#01, 7 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#02, 8 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Check health of shard DESKTOP-4VSHQ10#03, 8 times.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: ==============
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Summary:
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:7:Get Ingredients is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:8:Get Measurements is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:11:Ordered is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:10:Merge With is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:9:Get Meal Info is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:4:Has Restrictions is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:6:Lookup is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:5:Format Restrictions is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:3:Find Ingredients is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:2:Format Meal Name is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:1:Valid ID is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Test Assignment3 Tests:0:Project:0:Format Ingredient is successful.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Ran: 12 tests in: 0.11 seconds.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Cases: 12.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Tried: 12.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Errors: 0.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Failures: 0.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Skip: 0.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Todo: 0.
+2022-12-18T04:34:33+00:00 DESKTOP-4VSHQ10#00 I: Timeout: 0.

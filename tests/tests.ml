@@ -1,13 +1,11 @@
-
-(*open OUnit2;;
+open OUnit2;;
 module G = Generator
 module M = Meal
 
-let meal_info = [("idMeal", "52771");("strMeal", "Arrabiata Penne"); ("strInstructions", "Instructions info");
+let meal_info = [("idMeal", "52771");("strMeal", "Arrabiata Penne"); ("strInstructions", "Instructions.info");
 ("strArea", "Italian"); ("strMealThumb", "Image_URL"); ("strYoutube", "Video_URL"); ("strIngredient1", "peanut");
 ("strIngredient2", "chicken"); ("strMeasure1", "2"); ("strMeasure2", "3")]
 
-let meal = "", "", "Do This.Do That", "", "", "", [], []
 
 let test_format_ingredient _ = 
   assert_equal "peanut_butter" (G.format_ingredient "Peanut Butter");
@@ -42,30 +40,35 @@ let test_format_meal_name _ =
   assert_equal "" (G.format_meal_name "")
 
 let test_lookup _ = 
-  assert_equal "Italian" (G.lookup "strArea" meal_info);
-  assert_equal "" (G.lookup "strArea" []);
-  assert_equal "52771" (G.lookup "idMeal" meal_info);
-  assert_equal "" (G.lookup "Ingredient" meal_info)
+  assert_equal "Italian" (M.lookup "strArea" meal_info);
+  assert_equal "" (M.lookup "strArea" []);
+  assert_equal "52771" (M.lookup "idMeal" meal_info);
+  assert_equal "" (M.lookup "Ingredient" meal_info)
 
 let test_get_ingredients _ = 
-  assert_equal ["peanut"; "chicken"] (G.get_ingredients meal_info);
-  assert_equal [] (G.get_ingredients [])
+  assert_equal ["peanut"; "chicken"] (M.get_ingredients meal_info);
+  assert_equal [] (M.get_ingredients [])
 
 let test_get_measurements _ = 
-  assert_equal ["2"; "3"] (G.get_measurements meal_info);
-  assert_equal [] (G.get_measurements [])
+  assert_equal ["2"; "3"] (M.get_measurements meal_info);
+  assert_equal [] (M.get_measurements [])
 
 let test_get_meal_info _ = 
-  assert_equal (Some ("52771", "Arrabiata Penne", "Instructions info", "Italian", "Image_URL", "Video_URL")) (G.get_meal_info meal_info);
-  assert_equal None (G.get_meal_info [])
+  assert_equal (Some ("Arrabiata Penne", "52771", "Instructions.info", "Italian", "Image_URL", "Video_URL")) (M.get_meal_info meal_info);
+  assert_equal None (M.get_meal_info [])
 
 let test_merge_with _ = 
   assert_equal ["1. 1/4 cup Paprika"; "2. 1 Egg"] (M.merge_with ["Paprika"; "Egg"] ["1/4 cup"; "1"] 1);
   assert_equal ["Paprika"; "Egg"] (M.merge_with ["Paprika"; "Egg"] [] 1);
-  assert_equal [] (M.merge_with [] [] 1)
+  assert_equal [] (M.merge_with [] [] 1);
+  assert_equal [] (M.merge_with [] ["1"; "2"] 1);
+  assert_equal ["1. Egg"; "2. Butter"] (M.merge_with ["Egg"; "Butter"] [""; ""] 1)
 
+
+let meal1 = match M.create_meal meal_info with |None -> M.empty_meal |Some m -> m
 let test_ordered _ = 
-  assert_equal ["1. Do This"; "2. Do That"] (M.get_ordered_instructions meal)
+  assert_equal ["1. Instructions"; "2. info"] (M.get_ordered_instructions meal1);
+  assert_equal [] (M.get_ordered_instructions M.empty_meal)
 
 let project_tests = 
     "Project" 
@@ -92,5 +95,3 @@ let project_tests =
            ]
   
   let () = run_test_tt_main series
-    
-*)

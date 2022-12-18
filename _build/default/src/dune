@@ -1,0 +1,53 @@
+(library
+  (name meal)
+  (modules
+    meal)
+  (preprocess
+    (pps ppx_deriving_yojson bisect_ppx ))
+  (libraries
+    cohttp-lwt-unix
+    core
+    core_unix.sys_unix
+    core_unix
+    stdio
+    yojson 
+    ppx_deriving_yojson
+    )
+)
+
+
+(library
+  (name generator)
+  (modules
+    generator)
+  (preprocess
+    (pps ppx_deriving_yojson bisect_ppx ))
+  (libraries
+    cohttp-lwt-unix
+    core
+    core_unix.sys_unix
+    core_unix
+    meal
+    stdio
+    str
+    yojson 
+    ppx_deriving_yojson
+    )
+)
+
+(executable
+  (name main)
+  (modules
+    main)
+  (preprocess
+    (pps ppx_jane ppx_deriving_yojson))
+  (libraries
+    core
+    core_unix
+    core_unix.sys_unix
+    core_unix.command_unix
+    stdio
+    yojson 
+    generator
+    ppx_deriving_yojson)
+)
