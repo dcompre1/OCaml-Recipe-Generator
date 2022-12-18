@@ -403,16 +403,16 @@ let empty_meal =
   }
 
 let equal (m1 : meal) (m2 : meal) : bool =
-  <span data-count="24">S</span>tring.( = <span data-count="24">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">S</span>tring.( = <span data-count="15">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">S</span>tring.( = <span data-count="15">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">S</span>tring.( = <span data-count="15">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">S</span>tring.( = <span data-count="15">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">S</span>tring.( = <span data-count="15">)</span> m1.name m2.name
-  &amp;&amp; <span data-count="15">L</span>ist.equa<span data-count="15">l</span> String.( = ) m1.ingredients m2.ingredients
-  &amp;&amp; <span data-count="15">L</span>ist.equal String.( = ) m1.measurements m2.measurements
+  <span data-count="31">S</span>tring.( = <span data-count="31">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">S</span>tring.( = <span data-count="17">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">S</span>tring.( = <span data-count="17">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">S</span>tring.( = <span data-count="17">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">S</span>tring.( = <span data-count="17">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">S</span>tring.( = <span data-count="17">)</span> m1.name m2.name
+  &amp;&amp; <span data-count="17">L</span>ist.equa<span data-count="17">l</span> String.( = ) m1.ingredients m2.ingredients
+  &amp;&amp; <span data-count="17">L</span>ist.equal String.( = ) m1.measurements m2.measurements
 
-let is_empty (m : meal) : bool = <span data-count="2">e</span>qual m empty_meal
+let is_empty (m : meal) : bool = <span data-count="3">e</span>qual m empty_meal
 
 let rec merge_with (l : string list) (l2 : string list) (n : int) : string list
     =
@@ -438,8 +438,8 @@ let add_order (l : string list) : string list =
   <span data-count="30">L</span>ist.mapi ~f:(fun i s -&gt; <span data-count="381">s</span>tring_of_in<span data-count="368">t</span> (i + 1) ^ ". " ^ (sanitize_instructio<span data-count="177">n</span> s)) l
 
 let get_ordered_instructions (m : meal) : string list =
-  <span data-count="30">m</span>atch m.instructions with
-  | <span data-count="20">"</span>" -&gt; []
+  <span data-count="31">m</span>atch m.instructions with
+  | <span data-count="21">"</span>" -&gt; []
   | <span data-count="10">x</span> -&gt;
       add_order
         (String.split_on_chars ~on:[ '.' ] x
@@ -452,43 +452,43 @@ let get_img (m : meal) : string option =
   <span data-count="1329">m</span>atch m.img with <span data-count="20">"</span>" -&gt; None | <span data-count="2211">s</span> -&gt; Some s
 
 let rec get_ingredients (l : (string * string) list) : string list =
-  <span data-count="2681">m</span>atch l with
-  | <span data-count="3622">[</span>] -&gt; []
-  | <span data-count="3529">(</span>key, value) :: xs -&gt;
+  <span data-count="2879">m</span>atch l with
+  | <span data-count="3640">[</span>] -&gt; []
+  | <span data-count="3709">(</span>key, value) :: xs -&gt;
       if String.is_prefix ~prefix:"strIngred" key then
-        <span data-count="4002">v</span>alue :: get_ingredient<span data-count="546">s</span> xs
-      else <span data-count="2167">g</span>et_ingredients xs
+        <span data-count="4038">v</span>alue :: get_ingredient<span data-count="582">s</span> xs
+      else <span data-count="2311">g</span>et_ingredients xs
 
 let rec get_measurements (l : (string * string) list) : string list =
-  <span data-count="3102">m</span>atch l with
-  | <span data-count="3622">[</span>] -&gt; []
-  | <span data-count="1789">(</span>key, value) :: xs -&gt;
+  <span data-count="3300">m</span>atch l with
+  | <span data-count="3640">[</span>] -&gt; []
+  | <span data-count="1969">(</span>key, value) :: xs -&gt;
       if String.is_prefix ~prefix:"strMeasure" key then
-        <span data-count="4002">v</span>alue :: get_measurement<span data-count="546">s</span> xs
-      else <span data-count="2167">g</span>et_measurements xs
+        <span data-count="4038">v</span>alue :: get_measurement<span data-count="582">s</span> xs
+      else <span data-count="2311">g</span>et_measurements xs
 
 let rec lookup (k : string) (m : (string * string) list) : string =
-  <span data-count="1057">m</span>atch m with
+  <span data-count="1435">m</span>atch m with
   | <span data-count="2206">[</span>] -&gt; ""
-  | <span data-count="1055">(</span>k2, v) :: vs -&gt; if String.compar<span data-count="3192">e</span> k k2 &lt;&gt; 0 then <span data-count="768">l</span>ookup k vs else <span data-count="2425">v</span>
+  | <span data-count="1433">(</span>k2, v) :: vs -&gt; if String.compar<span data-count="3570">e</span> k k2 &lt;&gt; 0 then <span data-count="1038">l</span>ookup k vs else <span data-count="2533">v</span>
 
 let get_meal_info (l : (string * string) list) :
     (string * string * string * string * string * string) option =
-  <span data-count="100">m</span>atch l with
+  <span data-count="118">m</span>atch l with
   | <span data-count="67">[</span>] -&gt; None
-  | <span data-count="99">l</span> -&gt;
+  | <span data-count="117">l</span> -&gt;
       Some
-        ( looku<span data-count="99">p</span> "strMeal" l,
-          looku<span data-count="99">p</span> "idMeal" l,
-          looku<span data-count="99">p</span> "strInstructions" l,
-          looku<span data-count="99">p</span> "strArea" l,
-          looku<span data-count="33">p</span> "strMealThumb" l,
-          looku<span data-count="99">p</span> "strYoutube" l )
+        ( looku<span data-count="117">p</span> "strMeal" l,
+          looku<span data-count="117">p</span> "idMeal" l,
+          looku<span data-count="117">p</span> "strInstructions" l,
+          looku<span data-count="117">p</span> "strArea" l,
+          looku<span data-count="51">p</span> "strMealThumb" l,
+          looku<span data-count="117">p</span> "strYoutube" l )
 
 let create_meal (l : (string * string) list) : meal option =
-  <span data-count="66">m</span>atch get_meal_info l with
+  <span data-count="84">m</span>atch get_meal_info l with
   | <span data-count="66">N</span>one -&gt; None
-  | <span data-count="436">S</span>ome (n, i, ins, a, im, v) -&gt;
+  | <span data-count="454">S</span>ome (n, i, ins, a, im, v) -&gt;
       Some
         {
           name = n;
@@ -497,8 +497,8 @@ let create_meal (l : (string * string) list) : meal option =
           area = a;
           img = im;
           vid = v;
-          ingredients = get_ingredient<span data-count="32">s</span> l;
-          measurements = get_measurement<span data-count="98">s</span> l;
+          ingredients = get_ingredient<span data-count="50">s</span> l;
+          measurements = get_measurement<span data-count="116">s</span> l;
         }
 
 let print_list (l : string list) : unit =

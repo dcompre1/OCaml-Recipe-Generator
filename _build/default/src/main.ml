@@ -1,8 +1,6 @@
 open Core
 module G = Generator
 
-[@@@ocaml.warning "-32"]
-
 let rand =
   Command.basic ~summary:"get a random recipe"
     Command.Let_syntax.(
@@ -37,8 +35,9 @@ let id =
      in
      fun () -> G.get_meal_by_id filename id)
 
+(*
 let print_list (l : string list) : unit =
-  List.iter ~f:(fun x -> Stdio.printf "%s " x) l
+  List.iter ~f:(fun x -> Stdio.printf "%s " x) l *)
 
 let prompt_for_name name =
   printf "enter %s: %!" name;
@@ -154,7 +153,8 @@ let vegetarian =
        if list then G.get_recipe_list 'g' filename "" restrictions
        else G.get_recipe 'g' filename "" restrictions)
 
-let format_command command = String.filter ~f:(fun c -> Char.is_alpha c) command
+       (*
+let format_command command = String.filter ~f:(fun c -> Char.is_alpha c) command *)
 
 let command =
   Command.group ~summary:"receive recipes"

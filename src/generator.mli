@@ -5,6 +5,26 @@ type meal = M.meal
 val get_recipe : char -> string -> string -> string list -> unit
 val get_recipe_list : char -> string -> string -> string list -> unit
 
+ val rem_meal: meal -> meal list -> meal list 
+ 
+ val is_file: string -> string
+ 
+ val no_meals: meal list -> bool
+ 
+ (*find a meal in a list of meals by its number*)
+ val find_meal: int -> meal list -> meal
+ 
+ val number_list: meal list -> string list
+
+ module type Randomness = sig
+   (*
+     Given a maximum integer value, return a pseudorandom integer from 0 (inclusive) to this value (exclusive).
+   *)
+   val int : int -> int
+ end
+
+
+
 (*val get_ingredients: (string * string) list -> string list
 
   val get_measurements: (string * string) list -> string list
@@ -63,7 +83,7 @@ val filter_meals : string list -> meal list -> meal list
 val get_random_meal : string -> unit
 
 (* return a randomly selected meal from a list of meals *)
-val get_meal : meal list -> meal
+val get_meal : (module Randomness) -> meal list -> meal
 
 (* string is the ID value
    call valid_id
