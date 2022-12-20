@@ -7,7 +7,6 @@ maintainer: ["dcompre1@jh.edu"]
 authors: ["Dinamary Compres"]
 depends: [
   "dune" {>= "3.4"}
-  "ounit2" {> "2.2.6"}
   "core" {> "0.15.0"}
   "cohttp" {> "5.0.0"}
   "core_unix" {> "0.15.0"}

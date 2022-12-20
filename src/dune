@@ -11,7 +11,6 @@
     core_unix.sys_unix
     core_unix
     stdio
-    ounit2
     )
 )
 
@@ -30,7 +29,6 @@
     meal
     stdio
     str
-    ounit2
     )
 )
 
@@ -48,6 +46,5 @@
     core_unix.command_unix
     stdio
     generator
-    ounit2
   )
 )
