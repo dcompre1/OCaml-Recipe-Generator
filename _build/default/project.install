@@ -10,7 +10,6 @@ lib: [
   "_build/install/default/lib/project/meal.cmxa"
   "_build/install/default/lib/project/meal.ml"
   "_build/install/default/lib/project/meal.mli"
-  "_build/install/default/lib/project/opam"
 ]
 libexec: [
   "_build/install/default/lib/project/meal.cmxs"

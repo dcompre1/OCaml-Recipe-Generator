@@ -13,8 +13,7 @@
    meal.cmx
    meal.cmxa
    meal.ml
-   meal.mli
-   opam))
+   meal.mli))
  (libexec (meal.cmxs))
  (bin (project)))
 (library
@@ -29,6 +28,7 @@
   core_unix.sys_unix
   core_unix
   stdio
+  ounit2
   bisect_ppx.runtime)
  (main_module_name Meal)
  (modes byte native)
