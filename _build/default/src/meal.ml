@@ -53,11 +53,13 @@ let rec merge_with (l : string list) (l2 : string list) (n : int) : string list
 let get_ordered_ingredients (m : meal) : string list =
   match m.ingredients with [] -> [] | x -> merge_with x m.measurements 1
 
-let sanitize_instruction (instruction: string): string = 
-   String.substr_replace_all ~pattern:"\\r\\n" ~with_:"" instruction 
+let sanitize_instruction (instruction : string) : string =
+  String.substr_replace_all ~pattern:"\\r\\n" ~with_:"" instruction
 
 let add_order (l : string list) : string list =
-  List.mapi ~f:(fun i s -> string_of_int (i + 1) ^ ". " ^ (sanitize_instruction s)) l
+  List.mapi
+    ~f:(fun i s -> string_of_int (i + 1) ^ ". " ^ sanitize_instruction s)
+    l
 
 let get_ordered_instructions (m : meal) : string list =
   match m.instructions with
@@ -124,15 +126,15 @@ let create_meal (l : (string * string) list) : meal option =
         }
 
 let print_list (l : string list) : unit =
-  List.iter ~f:(fun x -> Stdio.printf "%s\n " x) l
+  List.iter ~f:(fun x -> Stdio.printf "%s\n" x) l
 
 [@@@coverage off]
 
 let print_meal (m : meal) : unit =
-  Stdio.printf "Meal Name: %s\n" m.name;
+  Stdio.printf "\nMeal Name: %s\n" m.name;
   Stdio.printf "Meal ID: %s\n" m.id;
   Stdio.printf "Area: %s\n" m.area;
-  print_endline "Ingredients: ";
+  print_endline "\nIngredients: ";
   print_list (get_ordered_ingredients m);
   print_endline "";
   print_endline "Instructions";
@@ -140,7 +142,7 @@ let print_meal (m : meal) : unit =
   let vid =
     match get_video m with None -> "Youtube video not available" | Some v -> v
   in
-  Stdio.printf "Youtube video: %s\n" vid;
+  Stdio.printf "\nYoutube video: %s\n" vid;
   let img =
     match get_img m with None -> "Image not available" | Some i -> i
   in
@@ -154,7 +156,7 @@ let meal_to_file (m : meal) (filename : string) : unit =
            "Meal Name: " ^ m.name;
            "Meal ID: " ^ m.id;
            "Area: \n" ^ m.area;
-           "Ingredients: ";
+           "\nIngredients: ";
          |];
          List.to_array (get_ordered_ingredients m);
          [| "\nInstructions: " |];
@@ -165,7 +167,7 @@ let meal_to_file (m : meal) (filename : string) : unit =
               | None -> "Youtube video not available"
               | Some v -> v
             in
-            "Youtube video: " ^ vid);
+            "\nYoutube video: " ^ vid);
            (let img =
               match get_img m with None -> "Image not available" | Some i -> i
             in

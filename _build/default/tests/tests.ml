@@ -88,9 +88,10 @@ let test_ordered _ =
     assert_equal [meal1; meal2; meal3] (G.rem_meal M.empty_meal meal_list);
     assert_equal [] (G.rem_meal M.empty_meal [])
   
-  let test_is_file _ = 
-    assert_equal "filename.txt" (G.is_file "filename");
-    assert_equal "file.txt" (G.is_file "file.txt")
+  let test_format_file _ = 
+    assert_equal "filename.txt" (G.format_file "filename" "name");
+    assert_equal "file.txt" (G.format_file "file.txt" "name");
+    assert_equal "name.txt" (G.format_file "" "name")
 
   let test_no_meals _ = 
     assert_equal true (G.no_meals []);
@@ -117,9 +118,10 @@ let test_get_meal _ =
   assert_equal M.empty_meal (G.get_meal (module My_Rand) []);
   assert_equal meal1 (G.get_meal (module My_Rand) [meal1])
   
+let test_tuple_list _ = 
+  assert_equal [("1", "string1"); ("2", "string2")] (G.tuple_list ["1:string1"; "2:string2"]);
+  assert_equal [("", "")] (G.tuple_list [""])
 
-
-(*TODO: make two parts: generator tests and meal tests*)
 let project_tests = 
     "Project" 
     >: test_list 
@@ -137,11 +139,12 @@ let project_tests =
       "Merge With" >:: test_merge_with;
       "Ordered" >:: test_ordered;
       "Remove Meal" >:: test_rem_meal;
-      "Is File" >:: test_is_file;
+      "Is File" >:: test_format_file;
       "No Meals" >:: test_no_meals;
       "Find Meal" >:: test_find_meal;
       "Number List" >:: test_number_list;
-      "Get Meal" >:: test_get_meal
+      "Get Meal" >:: test_get_meal;
+      "Tuple List" >:: test_tuple_list
     ]
     
   let series =

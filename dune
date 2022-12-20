@@ -7,7 +7,6 @@
     src/main.ml
     src/meal.ml
     src/meal.mli
-    src/mocks.txt
     src/dune
     tests/tests.ml
     tests/dune
