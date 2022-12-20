@@ -1,4 +1,5 @@
 (lang dune 3.4)
+(name project)
 (generate_opam_files true)
 (authors "Dinamary Compres")
 (maintainers "dcompre1@jh.edu")
