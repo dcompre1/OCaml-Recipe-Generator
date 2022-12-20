@@ -1,5 +1,6 @@
 (library
   (name meal)
+  (public_name project)
   (modules
     meal)
   (preprocess
@@ -33,6 +34,7 @@
 
 (executable
   (name main)
+  (public_name project)
   (modules
     main)
   (preprocess

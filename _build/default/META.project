@@ -1,0 +1,7 @@
+description = ""
+requires =
+"bisect_ppx.runtime cohttp-lwt-unix core core_unix core_unix.sys_unix stdio"
+archive(byte) = "meal.cma"
+archive(native) = "meal.cmxa"
+plugin(byte) = "meal.cma"
+plugin(native) = "meal.cmxs"
